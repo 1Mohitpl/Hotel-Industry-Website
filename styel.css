@@ -10,3 +10,11 @@ html body{
     height: 100%;
     width: 100%;
 }
+
+#page1{
+
+    height: 100vh;
+    width: 100%;
+    background-color: bisque;
+    position: relative;
+}
