@@ -60,7 +60,17 @@ nav {
     height: 100px;
     font-style: italic;
     font-size: 1.5vw;
+    border: none;
     color: #fff;
+    margin: 5px 10px;
+    opacity: 0.9  ;
+    transition: 0.1s;
+    cursor: pointer;
+
+  }
+
+  .h4 :hover {
+    opacity: 1;
   }
 .page1-content h1{
    font-size: 15vw;
@@ -72,6 +82,7 @@ nav {
   position: absolute;
   display: flex;
   padding: 25px;
+  margin: 2px;
    
 }
 .category-container{
@@ -102,6 +113,7 @@ nav {
   margin: 5px 10px;
   opacity: 0.9  ;
   transition: 0.1s;
+  cursor: pointer;
 }
 
 .category-btn:hover {opacity: 1}
