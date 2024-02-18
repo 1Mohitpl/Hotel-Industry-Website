@@ -2,12 +2,12 @@ function cursorEffect () {
     var page1Content = document.querySelector (".page1-content")
 var cursor = document.querySelector("#cursor")
 
-page1Content.addEventListener("mousemove", function(dets){
+page1Content.addEventListener("mousemove", function(action){
 
     gsap.to("#cursor", {
     
-        x : dets.x,
-        y : dets.y
+        x : action.x,
+        y : action.y
     })
    
 })
@@ -16,7 +16,7 @@ page1Content.addEventListener("mouseenter" , function(){
 
     gsap.to(cursor, {
         scale:1,
-        opacity:2
+        opacity:1
         
     })
 })
@@ -33,24 +33,22 @@ page1Content.addEventListener("mouseleave" , function(){
 }
 
 cursorEffect()
- 
 
 function page2Animation () {
    
     gsap.from (".elem h1", {
         y:120,
-        stagger:0.2,
+        stagger:0.25,
         duration:1,
         scrollTrigger:{
-            start: "top 47%",
-            end: "top 46%",
-            markers:true,
-            scrub:2
+            trigger:"#page2",
+            scroller: "#main",
+            start:"top 47%",
+            end:"top 46%",
+          
         }
     })
     
 }
 
 page2Animation()
-
-

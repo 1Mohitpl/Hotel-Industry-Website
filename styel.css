@@ -63,11 +63,12 @@ html body {
 } 
 
 nav {
+  height: 60vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px;
+  padding: 60px;
 
 }
   h3 {
@@ -148,5 +149,161 @@ nav {
 
   height: 100vh;
   width: 100%;
-  background-color: antiquewhite;
+  position: relative;
+  display: flex;
+  background-color: #ffffff;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  animation: expand .8s ease forwards;
+  background-color: var(--secondary-color);
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: all .8s ease;
+
+  
 }
+
+#page2-content {
+height: 100vh;
+width: 100%;
+position: relative;
+z-index: 2;
+display: flex;
+flex-direction: column;
+align-items:center;
+justify-content: space-between;
+padding-bottom: 10vw;
+background-color: burlywood;
+}
+
+#page2-content h1{
+    
+  font-size: 4vw;
+  font-style: oblique;
+  color: azure;
+  font-weight: 100;
+  animation: slideIn 1.5s ease-in-out forwards;
+}
+
+#page2-content h2{
+    
+  font-style: oblique;
+  color: black;
+  font-weight: 100;
+  transform: translateY(100px);
+  animation: slideUp .8s ease forwards .5s;
+   overflow: hidden;
+  height: auto;
+}
+
+#page3{
+   min-height: 100vh;
+   width: 100%;
+   position: relative;
+   padding: 4vw;
+}
+
+#page3-top{
+  font-size: larger;
+  font-style: italic;
+  margin: 20px;
+  padding: 3vw;
+  text-align: center;
+}
+
+#page3-top h4{
+      
+  font-size: 1.9vw;
+  font-weight: 500;
+  color: black;
+  font-style: italic;
+}
+
+#page3-top h2{
+    
+  font-size: 5vw;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+#page3-elements{
+
+   height: 75vh;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: red;
+   
+
+}
+#page3-elements .box{
+
+  height: 100%;
+  width: 33%;
+  background-color:blue;
+}
+
+#page3-elements .box img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center; 
+}
+
+#page4{
+
+  height: 100vh;
+  width: 100%;
+  position :relative;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+
+
