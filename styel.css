@@ -251,6 +251,7 @@ background-color: burlywood;
   width: 100%;
   object-fit: cover;
   object-position: center; 
+
 }
 
 #page4{
@@ -261,7 +262,7 @@ background-color: burlywood;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
+  background-color : seashell;
 
  
 }
@@ -270,12 +271,13 @@ background-color: burlywood;
 
     height: 70vh;
     width: 35%;
-
-
-    
 }
 
-
+#page4 svg{
+   
+  position : absolute;
+  height: 55%;
+}
 
 
 
