@@ -243,7 +243,6 @@ background-color: burlywood;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   background-color: red;
    
 
 }
@@ -251,15 +250,25 @@ background-color: burlywood;
 
   height: 100%;
   width: 33%;
-  background-color:blue;
+  position: relative;
+
 }
 
 #page3-elements .box img{
   height: 100%;
   width: 100%;
+  position: absolute;
   object-fit: cover;
-  object-position: center; 
+  object-position: center;
+  -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 
+}
+#page3-elements .box:hover img{
+  -webkit-filter: grayscale(0);
+	filter: grayscale(0);
 }
 
 #page4{
