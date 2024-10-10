@@ -126,7 +126,6 @@ function page2Animation () {
     
 }
 
-page2Animation()
+page2Animation();
 
 
-document.querySelector("#page1")

@@ -263,7 +263,7 @@ background-color: burlywood;
   -webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
 	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+	transition: 0.9s ease-in-out;
 
 }
 #page3-elements .box:hover img{
@@ -271,43 +271,171 @@ background-color: burlywood;
 	filter: grayscale(0);
 }
 
-#page4{
-
+#page4 {
   height: 100vh;
   width: 100%;
-  position :relative;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color : seashell;
-
- 
+  background-color: #f8f9fa; /* Light, clean background */
 }
 
-#page4 img{
-
-    height: 70vh;
-    width: 35%;
+#page4 img {
+  height: 70vh;
+  width: 35%;
+  object-fit: cover;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1)); /* Adds a subtle shadow */
 }
 
-#page4 svg{
-   
-  position : absolute;
+#cursor h5 {
+  font-size: 18px;
+  color: #2c3e50; /* Muted dark color for text */
+  font-family: 'Montserrat', sans-serif; /* Clean, modern font */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+
+#cursor h5:hover {
+  color: #1abc9c; /* Professional muted teal color */
+  transform: scale(1.05); /* Slight scaling for hover interaction */
+}
+
+/* First SVG circle animation */
+#page4 svg:first-of-type {
+  position: absolute;
   height: 55%;
+  transform-origin: center;
+  transform: rotate(-90deg); /* Start at -90deg */
+}
+
+#page4 svg:first-of-type circle {
+  stroke-width: 0.25;
+  opacity: 0.4;
+  fill: none;
+  stroke: #2c3e50; /* Muted dark color for the circle */
+  animation: drawCircle1 2.8s ease-out forwards;
+}
+
+@keyframes drawCircle1 {
+  0% {
+    stroke-dasharray: 308;
+    stroke-dashoffset: 616;
+  }
+  100% {
+    stroke-dashoffset: 492.8;
+  }
+}
+
+/* Second SVG circle animation */
+#page4 svg:nth-of-type(2) {
+  position: absolute;
+  height: 55%;
+  transform-origin: center;
+  animation: rotateSvg2 5s infinite linear; /* Slow, smooth rotation */
+}
+
+@keyframes rotateSvg2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg); /* Full rotation */
+  }
+}
+
+#page4 svg:nth-of-type(2) circle {
+  stroke-width: 0.25;
+  opacity: 0.4;
+  fill: none;
+  stroke: #1abc9c; /* Professional teal color */
+  animation: drawCircle2 2.8s ease-out forwards;
+}
+
+@keyframes drawCircle2 {
+  0% {
+    stroke-dasharray: 308;
+    stroke-dashoffset: 308;
+  }
+  100% {
+    stroke-dashoffset: 184.8;
+  }
+}
+
+/* Circle in the center of the second SVG */
+#page4 svg:nth-of-type(2) circle:first-of-type {
+  fill: #fff; /* Pure white for the central dot */
+}
+
+/* Animation for cursor click text */
+#cursor h5 {
+  animation: fadeInText 4s infinite alternate;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6; /* Subtle fade for elegance */
+  }
 }
 
 
-#page5{
+
+.page5{
   position: relative;
   height: 100vh;
   width: 100%;
+  padding: 4vw 0;
+}
+
+.page5 h1{
+  font-size: 10vw;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+  border-bottom: 1px solid black;
+  width: 96%;
+  margin-left: 2%;
 }
 
 
+.swiperdiv{
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  margin-top: -5%;
+
+}
 
 
+.swiper {
+  width: 120%;
+  height: 100%;
+}
 
+.swiper-slide {
+ width: 300px;
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
 
+.swiper-slide img {
+  display: block;
+  width: 20%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 
