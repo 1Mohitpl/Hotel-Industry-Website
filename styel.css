@@ -229,11 +229,24 @@ background-color: burlywood;
    padding: 4px 10px;
    border-radius: 10px;
 }
-#page3-top h2{
-    
-  font-size: 3vw;
-  font-weight: 400;
-  margin-top: 10px;
+#page3-top h2 {
+  position: relative; /* Position relative for the underline */
+  display: inline-block; /* Make the element only as wide as its content */
+  color: #333; /* Dark gray text color */
+}
+#page3-top h2::after {
+  content: ""; /* Create an empty element */
+  position: absolute; /* Position it relative to the h2 */
+  left: 0; /* Start from the left */
+  bottom: 0; /* Position it at the bottom */
+  width: 100%; /* Full width of the h2 */
+  height: 3px; /* Height of the underline */
+  background-color: #007BFF; /* Underline color */
+  transform: scaleX(0); /* Initially hide the underline */
+  transition: transform 0.3s ease; /* Animation transition */
+}
+#page3-top h2:hover::after {
+  transform: scaleX(1); /* Show the underline on hover */
 }
 
 #page3-elements{
@@ -387,7 +400,7 @@ background-color: burlywood;
 
 
 .page5{
-  position: relative;
+  position: absolute;
   height: 100vh;
   width: 100%;
   padding: 4vw 0;
@@ -402,6 +415,15 @@ background-color: burlywood;
   margin-left: 2%;
 }
 
+.page5 h2{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding:  20vw;
+
+}
 
 .swiperdiv{
   position: relative;
