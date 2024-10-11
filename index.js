@@ -131,5 +131,16 @@ page2Animation();
 
 
 
-    
- 
+
+// JavaScript to handle the loader and content display
+// window.addEventListener("load", function() {
+//     // Show the loader for 3 seconds
+//     setTimeout(function() {
+//         // Hide the loader
+//         document.getElementById("loader").style.display = "none";
+        
+//         // Show the website content
+//         document.getElementById("content").style.visibility = "visible";
+//     }, 3000); // Keep loader for 3 seconds
+// });
+
